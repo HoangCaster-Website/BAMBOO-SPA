@@ -1,0 +1,1082 @@
+/* ============================================================
+   BAMBOO SPA — Responsive Stylesheet
+   Breakpoints: 1440 · 1200 · 1024 · 768 · 430 · 390 · 375
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   LAPTOP — max-width: 1440px
+   ------------------------------------------------------------ */
+@media (max-width: 1440px) {
+
+  /* Layout */
+  .container {
+    max-width: 1200px;
+  }
+
+  /* Treatments grid: 5 columns slightly tighter */
+  .treatments__grid {
+    gap: var(--space-md);
+  }
+
+  /* Gallery grid */
+  .gallery__grid {
+    grid-auto-rows: 220px;
+  }
+
+  /* Footer grid tighter */
+  .footer__grid {
+    gap: var(--space-2xl);
+  }
+}
+
+/* ------------------------------------------------------------
+   SMALL DESKTOP — max-width: 1200px
+   ------------------------------------------------------------ */
+@media (max-width: 1200px) {
+
+  /* Container */
+  .container {
+    max-width: 1000px;
+  }
+
+  /* Navigation gaps */
+  .nav__list {
+    gap: var(--space-lg);
+  }
+
+  .nav__link {
+    font-size: var(--fs-xs);
+  }
+
+  /* Hero content */
+  .hero__content {
+    max-width: 600px;
+  }
+
+  /* Service bar */
+  .service-bar__item {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .service-bar__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .service-bar__name {
+    font-size: var(--fs-xs);
+  }
+
+  /* Treatments: switch to 3 columns + 2 */
+  .treatments__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* About section */
+  .about__grid {
+    gap: var(--space-2xl);
+  }
+
+  .about__image-wrapper img {
+    height: 480px;
+  }
+
+  /* Gallery grid: 3 columns */
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  .gallery__item:nth-child(4) {
+    grid-column: span 1;
+  }
+
+  /* Footer: 4 cols still but tighter */
+  .footer__grid {
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* ------------------------------------------------------------
+   TABLET LANDSCAPE — max-width: 1024px
+   ------------------------------------------------------------ */
+@media (max-width: 1024px) {
+
+  /* ---- Header: Show hamburger, hide nav ---- */
+  .nav-toggle {
+    display: flex;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  .lang-switch {
+    display: none;
+  }
+
+  /* ---- Mobile Menu Overlay ---- */
+  .mobile-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    z-index: var(--z-overlay);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--duration-slow) var(--ease-smooth),
+                visibility var(--duration-slow) var(--ease-smooth);
+  }
+
+  .mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-3xl);
+  }
+
+  .mobile-menu__link {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-regular);
+    color: var(--warm-beige);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wider);
+    transition: color var(--duration-normal) var(--ease-smooth);
+    opacity: 0;
+    transform: translateY(20px);
+    /* Links animated in via JS */
+  }
+
+  .mobile-menu.active .mobile-menu__link {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity var(--duration-slow) var(--ease-smooth),
+                transform var(--duration-slow) var(--ease-smooth),
+                color var(--duration-normal) var(--ease-smooth);
+  }
+
+  /* Staggered animation for menu links */
+  .mobile-menu.active .mobile-menu__link:nth-child(1) { transition-delay: 0.1s; }
+  .mobile-menu.active .mobile-menu__link:nth-child(2) { transition-delay: 0.15s; }
+  .mobile-menu.active .mobile-menu__link:nth-child(3) { transition-delay: 0.2s; }
+  .mobile-menu.active .mobile-menu__link:nth-child(4) { transition-delay: 0.25s; }
+  .mobile-menu.active .mobile-menu__link:nth-child(5) { transition-delay: 0.3s; }
+  .mobile-menu.active .mobile-menu__link:nth-child(6) { transition-delay: 0.35s; }
+
+  .mobile-menu__link:hover,
+  .mobile-menu__link.active {
+    color: var(--champagne);
+  }
+
+  .mobile-menu__cta {
+    margin-top: var(--space-lg);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .mobile-menu.active .mobile-menu__cta {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity var(--duration-slow) var(--ease-smooth) 0.4s,
+                transform var(--duration-slow) var(--ease-smooth) 0.4s;
+  }
+
+  .mobile-menu__lang {
+    margin-top: var(--space-xl);
+    display: flex;
+    gap: var(--space-md);
+    opacity: 0;
+  }
+
+  .mobile-menu.active .mobile-menu__lang {
+    opacity: 1;
+    transition: opacity var(--duration-slow) var(--ease-smooth) 0.5s;
+  }
+
+  .mobile-menu__lang-btn {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-semibold);
+    color: var(--warm-beige);
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wider);
+    transition: all var(--duration-normal) var(--ease-smooth);
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .mobile-menu__lang-btn.active {
+    opacity: 1;
+    color: var(--champagne);
+  }
+
+  .mobile-menu__lang-btn:hover {
+    opacity: 0.8;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    min-height: 550px;
+  }
+
+  .hero__content {
+    max-width: 550px;
+  }
+
+  .hero__pagination {
+    right: var(--space-md);
+  }
+
+  /* ---- Service Bar: keep 5 but smaller ---- */
+  .service-bar__item {
+    padding: var(--space-sm) var(--space-xs);
+    gap: var(--space-xs);
+  }
+
+  .service-bar__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .service-bar__name {
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+  }
+
+  /* ---- About: stack ---- */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .about__image-wrapper img {
+    height: 400px;
+  }
+
+  .about__features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ---- Treatments: 2 columns ---- */
+  .treatments__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .treatments__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  /* ---- Gallery ---- */
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+  }
+
+  /* ---- Contact: stack ---- */
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .contact__map {
+    min-height: 350px;
+  }
+
+  /* ---- Footer: 2x2 grid ---- */
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .footer__brand {
+    max-width: none;
+    grid-column: span 2;
+  }
+}
+
+/* ------------------------------------------------------------
+   TABLET PORTRAIT — max-width: 768px
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+
+  /* ---- Header ---- */
+  .header {
+    height: 75px;
+  }
+
+  .header--scrolled {
+    height: 65px;
+  }
+
+  html {
+    scroll-padding-top: 75px;
+  }
+
+  .header__logo-name {
+    font-size: 1.3rem;
+  }
+
+  .header--scrolled .header__logo-name {
+    font-size: 1.15rem;
+  }
+
+  .header__logo-tagline {
+    font-size: 0.5rem;
+  }
+
+  .header__logo-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    min-height: 500px;
+    max-height: 800px;
+  }
+
+  .hero__content {
+    max-width: 480px;
+    padding-left: 0;
+  }
+
+  .hero__text {
+    font-size: var(--fs-body);
+    max-width: 420px;
+  }
+
+  .hero__pagination {
+    display: none;
+  }
+
+  .hero__scroll {
+    bottom: 1.5rem;
+  }
+
+  /* ---- Service Bar: 3 + 2 or scrollable ---- */
+  .service-bar__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .service-bar__item {
+    flex: 0 0 33.333%;
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  /* Remove right divider on 3rd item */
+  .service-bar__item:nth-child(3)::after {
+    display: none;
+  }
+
+  /* Last 2 items centered */
+  .service-bar__item:nth-child(4),
+  .service-bar__item:nth-child(5) {
+    flex: 0 0 33.333%;
+  }
+
+  /* ---- About ---- */
+  .about__image-wrapper img {
+    height: 350px;
+  }
+
+  .about__accent {
+    bottom: -15px;
+    right: -10px;
+    padding: var(--space-lg) var(--space-xl);
+  }
+
+  .about__accent-number {
+    font-size: var(--fs-h3);
+  }
+
+  .about__features {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* ---- Treatments ---- */
+  .treatments__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .treatment-card__image {
+    padding-top: 110%;
+  }
+
+  /* ---- Gallery: 2 columns ---- */
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+    gap: var(--space-sm);
+  }
+
+  .gallery__item:nth-child(1) {
+    grid-row: span 1;
+  }
+
+  .gallery__item:nth-child(6) {
+    grid-row: span 1;
+  }
+
+  /* ---- Booking Banner ---- */
+  .booking-banner {
+    padding: var(--space-4xl) 0;
+  }
+
+  .booking-banner__title {
+    font-size: var(--fs-h2);
+  }
+
+  /* ---- Contact ---- */
+  .contact__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__map {
+    min-height: 300px;
+  }
+
+  /* ---- Footer ---- */
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer__brand {
+    grid-column: span 2;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .footer__legal {
+    gap: var(--space-lg);
+  }
+
+  /* ---- Lightbox ---- */
+  .lightbox__nav--prev {
+    left: var(--space-md);
+  }
+
+  .lightbox__nav--next {
+    right: var(--space-md);
+  }
+
+  .lightbox__close {
+    top: var(--space-md);
+    right: var(--space-md);
+  }
+
+  /* ---- Cookie Banner ---- */
+  .cookie-banner__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-lg);
+  }
+
+  .cookie-banner__actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- Page Hero ---- */
+  .page-hero {
+    height: 280px;
+    margin-top: 75px;
+  }
+}
+
+/* ------------------------------------------------------------
+   MOBILE — max-width: 430px  (iPhone 14 Pro Max, Samsung)
+   ------------------------------------------------------------ */
+@media (max-width: 430px) {
+
+  /* ---- Base ---- */
+  :root {
+    --gutter: 1rem;
+    --space-section: clamp(3rem, 6vw, 5rem);
+  }
+
+  /* ---- Header ---- */
+  .header {
+    height: 65px;
+  }
+
+  .header--scrolled {
+    height: 58px;
+  }
+
+  html {
+    scroll-padding-top: 65px;
+  }
+
+  .header__logo-name {
+    font-size: 1.15rem;
+  }
+
+  .header--scrolled .header__logo-name {
+    font-size: 1.05rem;
+  }
+
+  .header__logo-tagline {
+    font-size: 0.45rem;
+  }
+
+  .header__logo-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    min-height: 480px;
+    max-height: 700px;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    justify-content: flex-end;
+    padding-bottom: var(--space-4xl);
+    padding-top: var(--header-height);
+  }
+
+  .hero__label {
+    font-size: 0.65rem;
+  }
+
+  .hero__text {
+    font-size: var(--fs-small);
+    max-width: 100%;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  /* ---- Service Bar: vertical stack ---- */
+  .service-bar {
+    padding: var(--space-lg) 0;
+  }
+
+  .service-bar__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-bar__item {
+    flex: 0 0 50%;
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .service-bar__item:not(:last-child)::after {
+    display: none;
+  }
+
+  .service-bar__item:nth-child(5) {
+    flex: 0 0 50%;
+  }
+
+  .service-bar__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .service-bar__name {
+    font-size: 0.7rem;
+  }
+
+  /* ---- About ---- */
+  .about__image-wrapper img {
+    height: 280px;
+  }
+
+  .about__image-wrapper::before {
+    display: none;
+  }
+
+  .about__accent {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: var(--space-md);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  /* ---- Treatments: single column ---- */
+  .treatments__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .treatment-card__image {
+    padding-top: 80%;
+  }
+
+  /* ---- Gallery: 2 cols ---- */
+  .gallery__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 150px;
+  }
+
+  /* ---- Booking Banner ---- */
+  .booking-banner {
+    padding: var(--space-3xl) 0;
+  }
+
+  .booking-banner__title {
+    font-size: var(--fs-h3);
+  }
+
+  .booking-banner__text {
+    font-size: var(--fs-body);
+  }
+
+  /* ---- Contact ---- */
+  .contact__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__map {
+    min-height: 250px;
+  }
+
+  /* ---- Footer ---- */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer__brand {
+    grid-column: span 1;
+  }
+
+  .footer__legal {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  /* ---- Buttons ---- */
+  .btn {
+    padding: 12px 24px;
+    font-size: var(--fs-xs);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn--lg {
+    padding: 14px 28px;
+    font-size: var(--fs-small);
+  }
+
+  /* Floating booking button on mobile */
+  .mobile-booking-btn {
+    display: flex !important;
+    position: fixed;
+    bottom: var(--space-lg);
+    left: var(--space-md);
+    right: var(--space-md);
+    z-index: var(--z-sticky);
+    background-color: var(--gold);
+    color: var(--primary);
+    padding: 16px 24px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wider);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xs);
+    box-shadow: var(--shadow-xl), var(--shadow-gold);
+    transition: all var(--duration-normal) var(--ease-smooth);
+  }
+
+  .mobile-booking-btn:hover {
+    background-color: var(--champagne);
+  }
+
+  /* Push scroll-to-top above floating booking button */
+  .scroll-top {
+    bottom: calc(var(--space-lg) + 70px);
+    right: var(--space-md);
+    width: 42px;
+    height: 42px;
+  }
+
+  /* ---- Lightbox mobile ---- */
+  .lightbox__image {
+    max-width: 95vw;
+    max-height: 70vh;
+  }
+
+  .lightbox__nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox__nav--prev {
+    left: var(--space-sm);
+  }
+
+  .lightbox__nav--next {
+    right: var(--space-sm);
+  }
+
+  /* ---- Page Hero ---- */
+  .page-hero {
+    height: 220px;
+    margin-top: 65px;
+  }
+
+  .page-hero__title {
+    font-size: var(--fs-h2);
+  }
+
+  /* ---- Cookie banner ---- */
+  .cookie-banner__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cookie-banner__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ------------------------------------------------------------
+   MOBILE — max-width: 390px  (iPhone 14 / 15)
+   ------------------------------------------------------------ */
+@media (max-width: 390px) {
+
+  .header__logo-name {
+    font-size: 1.05rem;
+  }
+
+  .header__logo-tagline {
+    display: none;
+  }
+
+  .header__logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hero {
+    min-height: 440px;
+  }
+
+  .hero__content {
+    padding-bottom: var(--space-3xl);
+  }
+
+  /* Service bar stays 2-col */
+  .service-bar__item {
+    padding: var(--space-sm) var(--space-xs);
+  }
+
+  /* About */
+  .about__image-wrapper img {
+    height: 240px;
+  }
+
+  /* Treatment card */
+  .treatment-card__image {
+    padding-top: 70%;
+  }
+
+  .treatment-card__info {
+    padding: var(--space-md);
+  }
+
+  /* Gallery: single column */
+  .gallery__grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+
+  .gallery__item:nth-child(n) {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  /* Footer */
+  .footer__bottom {
+    gap: var(--space-sm);
+  }
+
+  .footer__legal {
+    gap: var(--space-sm);
+  }
+
+  .footer__legal-link {
+    font-size: 0.65rem;
+  }
+}
+
+/* ------------------------------------------------------------
+   MOBILE — max-width: 375px  (iPhone SE, iPhone 12 mini)
+   ------------------------------------------------------------ */
+@media (max-width: 375px) {
+
+  :root {
+    --gutter: 0.875rem;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .header--scrolled {
+    height: 55px;
+  }
+
+  html {
+    scroll-padding-top: 60px;
+  }
+
+  .header__logo-name {
+    font-size: 1rem;
+  }
+
+  .header__logo-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .hero {
+    min-height: 400px;
+    max-height: 600px;
+  }
+
+  /* Service bar single column */
+  .service-bar__item {
+    flex: 0 0 50%;
+  }
+
+  /* About */
+  .about__image-wrapper img {
+    height: 200px;
+  }
+
+  .about__accent {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  /* Gallery */
+  .gallery__grid {
+    grid-auto-rows: 180px;
+  }
+
+  /* Contact map */
+  .contact__map {
+    min-height: 220px;
+  }
+
+  /* Mobile booking button */
+  .mobile-booking-btn {
+    padding: 14px 20px;
+    font-size: var(--fs-xs);
+    left: var(--space-sm);
+    right: var(--space-sm);
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .btn--lg {
+    padding: 12px 24px;
+  }
+
+  /* Page hero */
+  .page-hero {
+    height: 200px;
+    margin-top: 60px;
+  }
+
+  .page-hero__title {
+    font-size: var(--fs-h3);
+  }
+
+  /* Mobile menu links smaller */
+  .mobile-menu__link {
+    font-size: var(--fs-h4);
+  }
+}
+
+/* ------------------------------------------------------------
+   DESKTOP-ONLY: Hide mobile-only elements
+   ------------------------------------------------------------ */
+.mobile-booking-btn {
+  display: none;
+}
+
+/* Ensure mobile menu hidden on larger screens via its own toggle state,
+   but the element itself is display:none above 1024px (set in the
+   1024px breakpoint block above). Below 1024px it's display:flex
+   but invisible until .active is added. */
+
+/* ------------------------------------------------------------
+   PRINT STYLES
+   ------------------------------------------------------------ */
+@media print {
+  .header,
+  .hero__pagination,
+  .hero__scroll,
+  .scroll-top,
+  .cookie-banner,
+  .mobile-booking-btn,
+  .preloader,
+  .lightbox {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  .hero {
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    page-break-after: avoid;
+  }
+
+  .hero__overlay {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  .footer {
+    background: #f5f5f5;
+    color: #333;
+  }
+}
+
+/* ------------------------------------------------------------
+   LANDSCAPE ORIENTATION ON SMALL SCREENS
+   ------------------------------------------------------------ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    max-height: none;
+  }
+
+  .hero__content {
+    padding-top: calc(var(--header-height) + var(--space-md));
+    padding-bottom: var(--space-xl);
+    justify-content: center;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  .mobile-menu__nav {
+    gap: var(--space-md);
+  }
+
+  .mobile-menu__link {
+    font-size: var(--fs-body-lg);
+  }
+}
+
+/* ------------------------------------------------------------
+   HIGH-DPI / RETINA
+   ------------------------------------------------------------ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure thin lines stay crisp */
+  .divider,
+  .section-heading::after,
+  .footer__column-title::after {
+    height: 1.5px;
+  }
+
+  .hero__divider {
+    height: 1.5px;
+  }
+}
+
+/* ------------------------------------------------------------
+   HOVER-CAPABLE DEVICES
+   Only apply hover effects on devices that can truly hover
+   ------------------------------------------------------------ */
+@media (hover: none) {
+  .treatment-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .treatment-card:hover .treatment-card__image img {
+    transform: none;
+  }
+
+  .gallery__item:hover img {
+    transform: none;
+  }
+
+  .gallery__overlay {
+    display: none;
+  }
+
+  .service-bar__item:hover {
+    transform: none;
+  }
+
+  .about__image-wrapper:hover img {
+    transform: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+
+  .footer__social-link:hover {
+    transform: none;
+  }
+
+  .contact-card:hover {
+    transform: none;
+  }
+}

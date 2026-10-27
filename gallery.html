@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/jpeg" href="assets/logo/bamboo-spa-logo.jpg">
+  <meta name="description" content="Entdecken Sie die Welt von Bamboo Spa Zwickau in unserer Bildergalerie.">
+  <title>Galerie | Bamboo Spa Zwickau</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/unified-theme.css">
+</head>
+<body>
+
+  <!-- ============================================
+       PRELOADER
+       ============================================ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <img class="preloader-logo" src="assets/logo/bamboo-spa-logo.jpg" alt="">
+      <div class="preloader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       COOKIE BANNER
+       ============================================ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <p data-i18n="cookie.text">Diese Website verwendet Cookies, um Ihnen das beste Erlebnis zu bieten.</p>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-accept" id="cookieAccept" data-i18n="cookie.accept">Akzeptieren</button>
+        <button class="cookie-btn cookie-decline" id="cookieDecline" data-i18n="cookie.decline">Ablehnen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       HEADER / NAVIGATION
+       ============================================ -->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" aria-label="Bamboo Spa - Zur Startseite">
+          <img class="brand-logo-image" src="assets/logo/bamboo-spa-logo.jpg" alt="Bamboo Spa">
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav.home">Startseite</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav.about">Über uns</a></li>
+          <li><a href="treatments.html" class="nav-link" data-i18n="nav.treatments">Behandlungen &amp; Preise</a></li>
+          <li><a href="gallery.html" class="nav-link active" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#" class="btn-booking" data-booking-url="#" data-i18n="nav.booking">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Termin buchen</span>
+          </a>
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="de">DE</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================
+       PAGE HERO
+       ============================================ -->
+  <section class="page-hero" style="background-image: url('assets/images/generated/spa-reception-v3.jpg');">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+        <a href="index.html" data-i18n="breadcrumb.home">Startseite</a>
+        <span class="breadcrumb-separator" aria-hidden="true">&gt;</span>
+        <span data-i18n="breadcrumb.gallery">Galerie</span>
+      </nav>
+      <h1 class="page-hero-title" data-i18n="gallery.hero.title">Galerie</h1>
+      <p class="page-hero-subtitle" data-i18n="gallery.hero.subtitle">Entdecken Sie die Welt von Bamboo Spa.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       GALLERY SECTION
+       ============================================ -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label" data-i18n="gallery.section.label">Bildergalerie</span>
+        <h2 class="section-title" data-i18n="gallery.section.title">Einblicke in unsere Welt</h2>
+        <div class="section-divider"><span></span></div>
+        <p class="section-subtitle" data-i18n="gallery.section.subtitle">Lassen Sie sich von der Atmosphäre unseres Spas inspirieren und entdecken Sie unsere Räumlichkeiten, Behandlungen und die Liebe zum Detail.</p>
+      </div>
+
+      <!-- Gallery Filter Buttons -->
+      <div class="gallery-filters" data-animate="fade-up">
+        <button class="gallery-filter-btn active" data-filter="all" data-i18n="gallery.filter.all">Alle</button>
+        <button class="gallery-filter-btn" data-filter="raeumlichkeiten" data-i18n="gallery.filter.rooms">Räumlichkeiten</button>
+        <button class="gallery-filter-btn" data-filter="behandlungen" data-i18n="gallery.filter.treatments">Behandlungen</button>
+        <button class="gallery-filter-btn" data-filter="atmosphaere" data-i18n="gallery.filter.atmosphere">Atmosphäre</button>
+      </div>
+
+      <!-- Gallery Grid (Masonry) -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Gallery Item 1 — Spa Raum -->
+        <div class="gallery-item" data-category="raeumlichkeiten" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/bamboo-spa-hero-v2.jpg"
+              alt="Eleganter Spa-Raum mit warmem Licht und natürlichen Materialien"
+              loading="lazy"
+              width="600"
+              height="800"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Räumlichkeiten</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 — Massage -->
+        <div class="gallery-item" data-category="behandlungen" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/bamboo-massage-v3.jpg"
+              alt="Professionelle Massage-Behandlung in entspannter Atmosphäre"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Behandlungen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 — Wellness Bereich -->
+        <div class="gallery-item" data-category="raeumlichkeiten" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/head-spa-station-v3.jpg"
+              alt="Wellness-Bereich mit Bambus-Dekoration und sanftem Licht"
+              loading="lazy"
+              width="600"
+              height="600"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Räumlichkeiten</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 — Empfang -->
+        <div class="gallery-item" data-category="raeumlichkeiten" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/spa-reception-v3.jpg"
+              alt="Einladender Empfangsbereich des Bamboo Spa mit stilvoller Einrichtung"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Räumlichkeiten</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 — Head Spa -->
+        <div class="gallery-item" data-category="behandlungen" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/head-spa-treatment-v2.jpg"
+              alt="Head Spa Behandlung mit wohltuenden Ölen und sanfter Kopfmassage"
+              loading="lazy"
+              width="600"
+              height="800"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Behandlungen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 6 — Rückenmassage -->
+        <div class="gallery-item" data-category="behandlungen" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/bamboo-ritual-v2.jpg"
+              alt="Wohltuende Rückenmassage mit warmen Ölen"
+              loading="lazy"
+              width="800"
+              height="800"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Behandlungen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 7 — Gesichtsbehandlung -->
+        <div class="gallery-item" data-category="behandlungen" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/cosmetic-treatment-v2.jpg"
+              alt="Professionelle Gesichtsbehandlung mit hochwertigen Pflegeprodukten"
+              loading="lazy"
+              width="600"
+              height="800"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Behandlungen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 8 — Orchideen -->
+        <div class="gallery-item" data-category="atmosphaere" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/spa-products-tea-v3.jpg"
+              alt="Orchideen-Dekoration im Spa-Bereich für eine entspannende Atmosphäre"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Atmosphäre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 9 — Fußpflege -->
+        <div class="gallery-item" data-category="behandlungen" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/foot-reflexology-v3.jpg"
+              alt="Entspannende Fußpflege-Behandlung mit warmem Wasser"
+              loading="lazy"
+              width="600"
+              height="600"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Behandlungen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 10 — Spa Produkte -->
+        <div class="gallery-item" data-category="atmosphaere" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/generated/spa-atmosphere-v4.png"
+              alt="Steinschale mit Orchideen, Handtüchern und Pflegeölen im warmen Kerzenlicht"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Atmosphäre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 11 — Entspannung -->
+        <div class="gallery-item" data-category="atmosphaere" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/about-reception.jpg"
+              alt="Ruhezone zum Entspannen mit weichen Kissen und Kerzenlicht"
+              loading="lazy"
+              width="600"
+              height="800"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Atmosphäre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 12 — Bambus Dekoration -->
+        <div class="gallery-item" data-category="atmosphaere" data-animate="fade-up">
+          <div class="gallery-item-inner">
+            <img
+              src="assets/images/hero-spa-clean.jpg"
+              alt="Bambus-Dekoration und natürliche Elemente im Bamboo Spa"
+              loading="lazy"
+              width="800"
+              height="800"
+            >
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <svg class="gallery-zoom-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span class="gallery-overlay-label">Atmosphäre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /gallery-grid -->
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       LIGHTBOX
+       ============================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildvorschau">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Schließen">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Vorheriges Bild">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <div class="lightbox-image-wrapper">
+        <img class="lightbox-image" id="lightboxImage" src="" alt="Vergrößerte Bildansicht">
+      </div>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Nächstes Bild">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+      <div class="lightbox-footer">
+        <span class="lightbox-counter" id="lightboxCounter">1 / 12</span>
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       BOOKING BANNER
+       ============================================ -->
+  <section class="booking-banner" style="background-image: url('assets/images/generated/spa-products-tea-v3.jpg');">
+    <div class="booking-banner-overlay"></div>
+    <div class="booking-banner-content" data-animate="fade-up">
+      <h2 class="booking-banner-title" data-i18n="booking.banner.title">Bereit für Ihre Auszeit?</h2>
+      <p class="booking-banner-text" data-i18n="booking.banner.text">Gönnen Sie sich eine wohlverdiente Pause und buchen Sie Ihren Termin bei Bamboo Spa.</p>
+      <a href="#" class="btn btn-primary btn-lg" data-booking-url="#" data-i18n="booking.banner.button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Termin buchen</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo" aria-label="Bamboo Spa - Zur Startseite">
+            <img class="footer-logo-image" src="assets/logo/bamboo-spa-logo.jpg" alt="Bamboo Spa">
+          </a>
+          <p class="footer-tagline">RELAX / REBALANCE / RENEW</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.address.title">Adresse</h4>
+          <p>Lothar-Streit-Straße 5, Einheit 13<br>08056 Zwickau<br>Deutschland</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.hours.title">Öffnungszeiten</h4>
+          <p>Mo.-Fr.: 10:00-20:00 Uhr<br>Sa.: 10:00-19:00 Uhr<br>So.: Geschlossen</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact.title">Kontakt</h4>
+          <a href="mailto:info@bamboo-spa.de" class="footer-email">info@bamboo-spa.de</a>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <a href="#" data-i18n="footer.legal.impressum">Impressum</a>
+          <a href="#" data-i18n="footer.legal.privacy">Datenschutzerklärung</a>
+          <a href="#" data-i18n="footer.legal.terms">AGB</a>
+          <a href="contact.html" data-i18n="footer.legal.contact">Kontakt</a>
+        </div>
+        <p class="footer-copyright">© 2026 <span class="footer-credit-brand">HoangCaster</span>. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       SCROLL TO TOP
+       ============================================ -->
+  <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- ============================================
+       SCRIPTS
+       ============================================ -->
+  <script src="js/translations.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

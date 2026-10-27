@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/jpeg" href="assets/logo/bamboo-spa-logo.jpg">
+    <title>Behandlungen & Preise | Bamboo Spa Zwickau</title>
+    <meta name="description" content="Entdecken Sie unsere Wellness- und Beauty-Behandlungen bei Bamboo Spa in Zwickau.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/unified-theme.css">
+</head>
+<body>
+
+    <!-- =====================================================
+         PRELOADER
+    ====================================================== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <img class="preloader-logo" src="assets/logo/bamboo-spa-logo.jpg" alt="">
+            <div class="preloader-text">BAMBOO SPA</div>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         COOKIE BANNER
+    ====================================================== -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p data-i18n="cookie_text">Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten.</p>
+            <div class="cookie-actions">
+                <button class="cookie-btn cookie-btn-accept" id="cookieAccept" data-i18n="cookie_accept">Akzeptieren</button>
+                <button class="cookie-btn cookie-btn-decline" id="cookieDecline" data-i18n="cookie_decline">Ablehnen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         HEADER / NAVIGATION
+    ====================================================== -->
+    <header class="header" id="header">
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="nav-logo" aria-label="Bamboo Spa - Zur Startseite">
+                    <img class="brand-logo-image" src="assets/logo/bamboo-spa-logo.jpg" alt="Bamboo Spa">
+                </a>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Startseite</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav_about">Über uns</a></li>
+                    <li><a href="treatments.html" class="nav-link active" data-i18n="nav_treatments">Behandlungen & Preise</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Galerie</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Kontakt</a></li>
+                </ul>
+
+                <!-- Nav Actions -->
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-primary nav-cta" data-booking-url data-i18n="nav_booking">Termin buchen</a>
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="de">DE</button>
+                        <span class="lang-divider">|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+    <main>
+
+        <!-- =====================================================
+             PAGE HERO
+        ====================================================== -->
+        <section class="page-hero" style="background-image: url('assets/images/generated/bamboo-massage-v3.jpg');">
+            <div class="page-hero-overlay"></div>
+            <div class="page-hero-content">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+                    <a href="index.html" data-i18n="nav_home">Startseite</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span data-i18n="nav_treatments">Behandlungen & Preise</span>
+                </nav>
+                <h1 class="page-hero-title" data-i18n="treatments_hero_title">Behandlungen & Preise</h1>
+                <p class="page-hero-subtitle" data-i18n="treatments_hero_subtitle">Entdecken Sie unsere Wohlfühlmomente.</p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             TREATMENTS INTRO
+        ====================================================== -->
+        <section class="section section-cream">
+            <div class="container">
+                <div class="treatments-intro reveal">
+                    <span class="section-eyebrow" data-i18n="treatments_intro_eyebrow">UNSERE BEHANDLUNGEN</span>
+                    <h2 class="section-title section-title-center" data-i18n="treatments_intro_title">Wohlbefinden für Körper und Seele.</h2>
+                    <p class="treatments-intro-text" data-i18n="treatments_intro_text">Wir bieten Ihnen eine Auswahl an wohltuenden Behandlungen für Körper und Seele. Unsere Anwendungen werden individuell auf Ihre Bedürfnisse abgestimmt.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             NOTICE SECTION – Prices Coming Soon
+        ====================================================== -->
+        <section class="section section-soft-white">
+            <div class="container">
+                <div class="treatments-notice reveal">
+                    <div class="treatments-notice-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="24" cy="24" r="22" stroke="#C99A5C" stroke-width="1.5" fill="none"/>
+                            <circle cx="24" cy="24" r="18" stroke="#E8C18B" stroke-width="1" fill="none" opacity="0.4"/>
+                            <path d="M24 14 L24 26" stroke="#C99A5C" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="32" r="1.5" fill="#C99A5C"/>
+                        </svg>
+                    </div>
+                    <h3 class="treatments-notice-title" data-i18n="treatments_notice_title">Unsere Behandlungen und Preise werden in Kürze veröffentlicht.</h3>
+                    <p class="treatments-notice-text" data-i18n="treatments_notice_text">Für Fragen und Terminvereinbarungen kontaktieren Sie uns gerne.</p>
+                    <a href="contact.html" class="btn btn-secondary" data-i18n="treatments_notice_cta">Kontakt aufnehmen</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             TREATMENT CATEGORY 1: HEAD SPA
+        ====================================================== -->
+        <section class="section section-cream" id="head-spa">
+            <div class="container">
+                <div class="treatment-detail reveal">
+                    <div class="treatment-detail-image">
+                        <img src="assets/images/generated/head-spa-treatment-v2.jpg"
+                             alt="Head Spa Behandlung - Entspannende Kopfhautpflege"
+                             loading="lazy">
+                    </div>
+                    <div class="treatment-detail-content">
+                        <span class="section-eyebrow" data-i18n="treatment_cat1_eyebrow">BEHANDLUNG</span>
+                        <h2 class="section-title" data-i18n="treatment_cat1_title">Head Spa</h2>
+                        <p data-i18n="treatment_cat1_text">Erleben Sie eine tiefenreinigende und entspannende Kopfhautbehandlung. Unser Head Spa kombiniert sanfte Massage mit pflegenden Produkten für gesundes, glänzendes Haar.</p>
+                        <div class="treatment-price-placeholder">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="treatment-price-icon" aria-hidden="true">
+                                <circle cx="10" cy="10" r="9" stroke="#C99A5C" stroke-width="1"/>
+                                <path d="M10 5v6" stroke="#C99A5C" stroke-width="1.2" stroke-linecap="round"/>
+                                <circle cx="10" cy="14" r="0.8" fill="#C99A5C"/>
+                            </svg>
+                            <span data-i18n="treatment_prices_coming">Preise folgen in Kürze</span>
+                        </div>
+                        <a href="#" class="btn btn-primary" data-booking-url data-i18n="nav_booking">Termin buchen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             TREATMENT CATEGORY 2: MASSAGE
+        ====================================================== -->
+        <section class="section section-soft-white" id="massage">
+            <div class="container">
+                <div class="treatment-detail treatment-detail-reversed reveal">
+                    <div class="treatment-detail-content">
+                        <span class="section-eyebrow" data-i18n="treatment_cat2_eyebrow">BEHANDLUNG</span>
+                        <h2 class="section-title" data-i18n="treatment_cat2_title">Massage</h2>
+                        <p data-i18n="treatment_cat2_text">Unsere wohltuenden Massagen lösen Verspannungen und bringen Körper und Geist in Einklang. Genießen Sie verschiedene Massagetechniken, abgestimmt auf Ihre Bedürfnisse.</p>
+                        <div class="treatment-price-placeholder">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="treatment-price-icon" aria-hidden="true">
+                                <circle cx="10" cy="10" r="9" stroke="#C99A5C" stroke-width="1"/>
+                                <path d="M10 5v6" stroke="#C99A5C" stroke-width="1.2" stroke-linecap="round"/>
+                                <circle cx="10" cy="14" r="0.8" fill="#C99A5C"/>
+                            </svg>
+                            <span data-i18n="treatment_prices_coming">Preise folgen in Kürze</span>
+                        </div>
+                        <a href="#" class="btn btn-primary" data-booking-url data-i18n="nav_booking">Termin buchen</a>
+                    </div>
+                    <div class="treatment-detail-image">
+                        <img src="assets/images/generated/bamboo-massage-v3.jpg"
+                             alt="Massage Behandlung - Entspannende Ganzkörpermassage"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             TREATMENT CATEGORY 3: KOSMETIK
+        ====================================================== -->
+        <section class="section section-cream" id="kosmetik">
+            <div class="container">
+                <div class="treatment-detail reveal">
+                    <div class="treatment-detail-image">
+                        <img src="assets/images/generated/cosmetic-treatment-v2.jpg"
+                             alt="Kosmetikbehandlung - Professionelle Hautpflege"
+                             loading="lazy">
+                    </div>
+                    <div class="treatment-detail-content">
+                        <span class="section-eyebrow" data-i18n="treatment_cat3_eyebrow">BEHANDLUNG</span>
+                        <h2 class="section-title" data-i18n="treatment_cat3_title">Kosmetik</h2>
+                        <p data-i18n="treatment_cat3_text">Entdecken Sie unsere professionellen Kosmetikbehandlungen für ein strahlendes Hautbild. Mit hochwertigen Produkten pflegen und verwöhnen wir Ihre Haut.</p>
+                        <div class="treatment-price-placeholder">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="treatment-price-icon" aria-hidden="true">
+                                <circle cx="10" cy="10" r="9" stroke="#C99A5C" stroke-width="1"/>
+                                <path d="M10 5v6" stroke="#C99A5C" stroke-width="1.2" stroke-linecap="round"/>
+                                <circle cx="10" cy="14" r="0.8" fill="#C99A5C"/>
+                            </svg>
+                            <span data-i18n="treatment_prices_coming">Preise folgen in Kürze</span>
+                        </div>
+                        <a href="#" class="btn btn-primary" data-booking-url data-i18n="nav_booking">Termin buchen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             TREATMENT CATEGORY 4: FUßMASSAGE
+        ====================================================== -->
+        <section class="section section-soft-white" id="fussmassage">
+            <div class="container">
+                <div class="treatment-detail treatment-detail-reversed reveal">
+                    <div class="treatment-detail-content">
+                        <span class="section-eyebrow" data-i18n="treatment_cat4_eyebrow">BEHANDLUNG</span>
+                        <h2 class="section-title" data-i18n="treatment_cat4_title">Fußmassage</h2>
+                        <p data-i18n="treatment_cat4_text">Gönnen Sie Ihren Füßen eine wohlverdiente Auszeit. Unsere Fußmassagen fördern die Durchblutung und sorgen für tiefe Entspannung.</p>
+                        <div class="treatment-price-placeholder">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="treatment-price-icon" aria-hidden="true">
+                                <circle cx="10" cy="10" r="9" stroke="#C99A5C" stroke-width="1"/>
+                                <path d="M10 5v6" stroke="#C99A5C" stroke-width="1.2" stroke-linecap="round"/>
+                                <circle cx="10" cy="14" r="0.8" fill="#C99A5C"/>
+                            </svg>
+                            <span data-i18n="treatment_prices_coming">Preise folgen in Kürze</span>
+                        </div>
+                        <a href="#" class="btn btn-primary" data-booking-url data-i18n="nav_booking">Termin buchen</a>
+                    </div>
+                    <div class="treatment-detail-image">
+                        <img src="assets/images/generated/foot-reflexology-v3.jpg"
+                             alt="Fußmassage - Wohltuende Fußpflege und Reflexzonenmassage"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             TREATMENT CATEGORY 5: WELLNESS
+        ====================================================== -->
+        <section class="section section-cream" id="wellness">
+            <div class="container">
+                <div class="treatment-detail reveal">
+                    <div class="treatment-detail-image">
+                        <img src="assets/images/generated/bamboo-spa-hero-v2.jpg"
+                             alt="Wellness Behandlung - Ganzheitliche Entspannung"
+                             loading="lazy">
+                    </div>
+                    <div class="treatment-detail-content">
+                        <span class="section-eyebrow" data-i18n="treatment_cat5_eyebrow">BEHANDLUNG</span>
+                        <h2 class="section-title" data-i18n="treatment_cat5_title">Wellness</h2>
+                        <p data-i18n="treatment_cat5_text">Tauchen Sie ein in unsere Wellness-Welt und tanken Sie neue Energie. Besondere Momente der Ruhe und Erholung erwarten Sie.</p>
+                        <div class="treatment-price-placeholder">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="treatment-price-icon" aria-hidden="true">
+                                <circle cx="10" cy="10" r="9" stroke="#C99A5C" stroke-width="1"/>
+                                <path d="M10 5v6" stroke="#C99A5C" stroke-width="1.2" stroke-linecap="round"/>
+                                <circle cx="10" cy="14" r="0.8" fill="#C99A5C"/>
+                            </svg>
+                            <span data-i18n="treatment_prices_coming">Preise folgen in Kürze</span>
+                        </div>
+                        <a href="#" class="btn btn-primary" data-booking-url data-i18n="nav_booking">Termin buchen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             BOOKING BANNER
+        ====================================================== -->
+        <section class="booking-banner" style="background-image: url('assets/images/generated/spa-products-tea-v3.jpg');">
+            <div class="booking-banner-overlay"></div>
+            <div class="booking-banner-content reveal">
+                <h2 class="booking-banner-title" data-i18n="booking_title">Ihre Auszeit beginnt hier.</h2>
+                <p class="booking-banner-text" data-i18n="booking_text">Gönnen Sie sich eine wohlverdiente Pause und lassen Sie sich von uns verwöhnen.</p>
+                <a href="#" class="btn btn-primary btn-lg" data-booking-url data-i18n="nav_booking">Termin buchen</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Column 1: Logo & Tagline -->
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo" aria-label="Bamboo Spa - Zur Startseite">
+                        <img class="footer-logo-image" src="assets/logo/bamboo-spa-logo.jpg" alt="Bamboo Spa">
+                    </a>
+                    <p class="footer-tagline">RELAX / REBALANCE / RENEW</p>
+                </div>
+
+                <!-- Column 2: Address -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_address_title">Adresse</h4>
+                    <p>
+                        Lothar-Streit-Straße 5<br>
+                        Einheit 13<br>
+                        08056 Zwickau<br>
+                        Deutschland
+                    </p>
+                </div>
+
+                <!-- Column 3: Opening Hours -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_hours_title">Öffnungszeiten</h4>
+                    <ul class="footer-hours">
+                        <li><span data-i18n="footer_hours_mf">Mo - Fr:</span> 10:00 - 20:00</li>
+                        <li><span data-i18n="footer_hours_sa">Sa:</span> 10:00 - 19:00</li>
+                        <li><span data-i18n="footer_hours_su">So:</span> <span data-i18n="footer_hours_closed">Geschlossen</span></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact & Social -->
+                <div class="footer-col">
+                    <h4 data-i18n="footer_contact_title">Kontakt</h4>
+                    <p>
+                        <a href="mailto:info@bamboo-spa.de" class="footer-email">info@bamboo-spa.de</a>
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer_imprint">Impressum</a>
+                    <a href="#" data-i18n="footer_privacy">Datenschutzerklärung</a>
+                    <a href="#" data-i18n="footer_terms">AGB</a>
+                    <a href="contact.html" data-i18n="nav_contact">Kontakt</a>
+                </div>
+                <p>&copy; 2026 <span class="footer-credit-brand">HoangCaster</span>. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================
+         SCROLL TO TOP
+    ====================================================== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+    <script src="js/translations.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

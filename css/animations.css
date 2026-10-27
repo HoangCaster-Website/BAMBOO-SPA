@@ -1,0 +1,440 @@
+/* ============================================================
+   BAMBOO SPA — Animations & Micro-Interactions Stylesheet
+   Luxury Japanese Zen Spa · Zwickau, Deutschland
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. KEYFRAME DEFINITIONS
+   ------------------------------------------------------------ */
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade Out */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Slide Up */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Down */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In from Left */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In from Right */
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Ken Burns (Subtle Slow Zoom for Hero Slides) */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Gentle Floating Effect for Decorative Elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+/* Subtle Golden Glow Pulse */
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(201, 154, 92, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(201, 154, 92, 0.5);
+  }
+}
+
+/* Shimmer Line / Highlight */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Rotate / Spin */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------------------------------------------------
+   2. SCROLL REVEAL SYSTEM
+   ------------------------------------------------------------ */
+
+/* Base transition parameters */
+.reveal,
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+
+/* Default Reveal */
+.reveal {
+  transform: translateY(20px);
+}
+
+/* Reveal Up */
+.reveal-up {
+  transform: translateY(35px);
+}
+
+/* Reveal Left (slides in from left) */
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+/* Reveal Right (slides in from right) */
+.reveal-right {
+  transform: translateX(40px);
+}
+
+/* Reveal Scale (zooms in slightly) */
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+/* Active State: Triggered when in viewport */
+.reveal.revealed,
+.reveal-up.revealed,
+.reveal-left.revealed,
+.reveal-right.revealed,
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger Delay Classes */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+
+/* ------------------------------------------------------------
+   3. HERO SLIDER ANIMATIONS
+   ------------------------------------------------------------ */
+
+.hero-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.hero-slide.active .hero-slide-bg {
+  animation: kenBurns 18s ease-in-out infinite alternate;
+}
+
+.hero-slide.active .hero-content > * {
+  animation: slideUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.hero-slide.active .hero-eyebrow {
+  animation-delay: 0.2s;
+}
+
+.hero-slide.active .hero-title {
+  animation-delay: 0.35s;
+}
+
+.hero-slide.active .hero-subtitle {
+  animation-delay: 0.5s;
+}
+
+.hero-slide.active .hero-text {
+  animation-delay: 0.65s;
+}
+
+.hero-slide.active .btn-hero,
+.hero-slide.active .btn-booking {
+  animation-delay: 0.8s;
+}
+
+/* ------------------------------------------------------------
+   4. TEXT REVEAL EFFECTS
+   ------------------------------------------------------------ */
+
+.text-reveal__char,
+.text-reveal__word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.text-reveal--active .text-reveal__char,
+.text-reveal--active .text-reveal__word {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------
+   5. IMAGE REVEAL (CLIP-PATH)
+   ------------------------------------------------------------ */
+
+.image-reveal {
+  overflow: hidden;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.image-reveal--revealed,
+.image-reveal.revealed {
+  clip-path: inset(0 0 0 0);
+}
+
+/* ------------------------------------------------------------
+   6. DECORATIVE ELEMENTS & FLOATING LEAVES
+   ------------------------------------------------------------ */
+
+.about-deco-leaf {
+  animation: float 9s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* Subtle glow for champagne gold buttons */
+.btn-booking,
+.btn-booking-banner,
+.btn-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-booking::after,
+.btn-booking-banner::after,
+.btn-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: left 0.7s ease;
+}
+
+.btn-booking:hover::after,
+.btn-booking-banner:hover::after,
+.btn-hero:hover::after {
+  left: 150%;
+}
+
+/* ------------------------------------------------------------
+   7. PRELOADER ANIMATION
+   ------------------------------------------------------------ */
+
+.preloader-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+.preloader-bar-inner {
+  animation: shimmer 1.8s infinite linear;
+  background: linear-gradient(
+    90deg,
+    #C99A5C 0%,
+    #E8C18B 50%,
+    #C99A5C 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* ------------------------------------------------------------
+   8. SERVICE CARDS & CARDS MICRO-INTERACTIONS
+   ------------------------------------------------------------ */
+
+.treatment-card {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.treatment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(18, 9, 3, 0.4);
+}
+
+.treatment-card-image img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.treatment-card:hover .treatment-card-image img {
+  transform: scale(1.08);
+}
+
+.treatment-card-arrow {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.treatment-card:hover .treatment-card-arrow {
+  transform: translateX(4px);
+  background-color: var(--champagne, #E8C18B);
+  color: var(--primary, #241307);
+}
+
+/* ------------------------------------------------------------
+   9. SERVICE BAR HOVER ANIMATIONS
+   ------------------------------------------------------------ */
+
+.service-bar-item {
+  transition: transform 0.35s ease, background-color 0.35s ease;
+}
+
+.service-bar-item:hover {
+  transform: translateY(-4px);
+}
+
+.service-bar-item:hover .service-bar-icon svg {
+  transform: scale(1.1);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-bar-item:hover .service-bar-title {
+  color: var(--champagne, #E8C18B);
+}
+
+/* ------------------------------------------------------------
+   10. ACCESSIBILITY: PREFERS REDUCED MOTION
+   ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-slide {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none !important;
+  }
+
+  .hero-slide-bg {
+    animation: none !important;
+  }
+
+  .about-deco-leaf,
+  .preloader-icon {
+    animation: none !important;
+  }
+
+  .image-reveal {
+    clip-path: none !important;
+  }
+}
+
