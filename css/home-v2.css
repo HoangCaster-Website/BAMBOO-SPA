@@ -342,7 +342,7 @@ button { color: inherit; font: inherit; }
 
 .service-rail-inner {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .service-rail-item {
@@ -494,7 +494,7 @@ button { color: inherit; font: inherit; }
 
 .treatment-mosaic {
   display: grid;
-  grid-template-columns: 1.25fr .82fr .82fr;
+  grid-template-columns: 1.25fr .92fr;
   grid-template-rows: repeat(2, minmax(250px, 32vw));
   gap: 16px;
   max-height: 850px;
@@ -778,7 +778,7 @@ button { color: inherit; font: inherit; }
 
   .service-rail-inner {
     width: 100%;
-    grid-template-columns: repeat(5, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
     overflow-x: auto;
     padding: 0 20px;
     scroll-snap-type: x mandatory;
@@ -796,7 +796,7 @@ button { color: inherit; font: inherit; }
 
   .treatment-mosaic {
     grid-template-columns: 1.1fr 1fr;
-    grid-template-rows: repeat(3, 290px);
+    grid-template-rows: repeat(2, 290px);
     max-height: none;
   }
 

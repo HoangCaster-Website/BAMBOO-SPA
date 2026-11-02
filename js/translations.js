@@ -100,20 +100,20 @@ const translations = {
   /* ---------- Service Bar ----------------------------------------------- */
 
   'servicebar.headspa.label': {
-    de: 'Head Spa',
-    en: 'Head Spa',
+    de: 'Vietnamese Head Spa',
+    en: 'Vietnamese Head Spa',
   },
   'servicebar.headspa.desc': {
-    de: 'Entspannende Kopfbehandlung',
-    en: 'Relaxing scalp treatment',
+    de: 'Traditionelle Haar- und Kopfmassage',
+    en: 'Traditional hair and scalp massage',
   },
   'servicebar.massage.label': {
-    de: 'Massage',
-    en: 'Massage',
+    de: 'Ganzkörpermassage',
+    en: 'Full Body Massage',
   },
   'servicebar.massage.desc': {
-    de: 'Traditionelle Körpermassagen',
-    en: 'Traditional body massages',
+    de: '30 bis 120 Minuten',
+    en: '30 to 120 minutes',
   },
   'servicebar.kosmetik.label': {
     de: 'Kosmetik',
@@ -124,12 +124,12 @@ const translations = {
     en: 'Professional skin care',
   },
   'servicebar.fussmassage.label': {
-    de: 'Fußmassage',
-    en: 'Foot Massage',
+    de: 'Exklusive Fußmassage',
+    en: 'Exclusive Foot Massage',
   },
   'servicebar.fussmassage.desc': {
-    de: 'Reflexzonen-Therapie',
-    en: 'Reflexology therapy',
+    de: 'Fußpflege und Druckpunktmassage',
+    en: 'Foot care and pressure point massage',
   },
   'servicebar.wellness.label': {
     de: 'Wellness',
@@ -194,35 +194,35 @@ const translations = {
     en: 'Our Treatments',
   },
   'treatments.title': {
-    de: 'Verwöhnprogramm für jeden Anspruch',
-    en: 'Pampering Program for Every Need',
+    de: 'Drei Wege zur Entspannung',
+    en: 'Three Ways to Unwind',
   },
   'treatments.text': {
-    de: 'Entdecken Sie unser vielfältiges Angebot an professionellen Behandlungen - individuell auf Ihre Bedürfnisse abgestimmt.',
-    en: 'Discover our diverse range of professional treatments - individually tailored to your needs.',
+    de: 'Entdecken Sie unsere Massagen und Head-Spa-Rituale mit transparenten Zeiten und Preisen.',
+    en: 'Discover our massage and Head Spa rituals with clear durations and prices.',
   },
 
   /* -- Treatment Cards --------------------------------------------------- */
 
   'treatments.headspa.title': {
-    de: 'Head Spa',
-    en: 'Head Spa',
+    de: 'Vietnamese Head Spa',
+    en: 'Vietnamese Head Spa',
   },
   'treatments.headspa.text': {
-    de: 'Tiefenreinigende und entspannende Kopfhautbehandlung mit hochwertigen Pflegeprodukten. Fördert die Durchblutung und sorgt für gesundes, glänzendes Haar.',
-    en: 'Deep-cleansing and relaxing scalp treatment with premium care products. Promotes circulation and ensures healthy, shiny hair.',
+    de: 'Traditionelle Haar- und Kopfmassage mit wohltuender Pflege für Kopfhaut, Haar, Nacken und Schultern.',
+    en: 'Traditional hair and scalp massage with soothing care for the scalp, hair, neck, and shoulders.',
   },
   'treatments.headspa.btn': {
     de: 'Mehr erfahren',
     en: 'Learn More',
   },
   'treatments.massage.title': {
-    de: 'Massage',
-    en: 'Massage',
+    de: 'Ganzkörpermassage',
+    en: 'Full Body Massage',
   },
   'treatments.massage.text': {
-    de: 'Von der klassischen Ganzkörpermassage bis zur gezielten Rückenmassage - unsere Therapeuten lösen Verspannungen und schenken neue Energie.',
-    en: 'From classic full-body massage to targeted back massage - our therapists release tension and give you new energy.',
+    de: 'Wohltuende Massage zur tiefen Entspannung, Lockerung der Muskulatur und zum ganzheitlichen Wohlbefinden.',
+    en: 'A soothing massage for deep relaxation, easing muscle tension, and supporting overall well-being.',
   },
   'treatments.massage.btn': {
     de: 'Mehr erfahren',
@@ -241,12 +241,12 @@ const translations = {
     en: 'Learn More',
   },
   'treatments.fussmassage.title': {
-    de: 'Fußmassage',
-    en: 'Foot Massage',
+    de: 'Exklusive Fußmassage',
+    en: 'Exclusive Foot Massage',
   },
   'treatments.fussmassage.text': {
-    de: 'Wohltuende Fußreflexzonen-Massage basierend auf traditionellen asiatischen Techniken. Stimuliert die Selbstheilungskräfte des Körpers.',
-    en: 'Soothing foot reflexology massage based on traditional Asian techniques. Stimulates the body\'s self-healing powers.',
+    de: 'Ein verwöhnendes Ritual mit Kräuterfußbad, sorgfältiger Fußpflege und intensiver Druckpunktmassage.',
+    en: 'A pampering ritual with an herbal foot bath, careful foot care, and intensive pressure point massage.',
   },
   'treatments.fussmassage.btn': {
     de: 'Mehr erfahren',
@@ -263,6 +263,101 @@ const translations = {
   'treatments.wellness.btn': {
     de: 'Mehr erfahren',
     en: 'Learn More',
+  },
+
+  /* ---------- Treatments Menu & Pricing -------------------------------- */
+
+  'treatments.menu.title': {
+    de: 'Behandlungen & Preise',
+    en: 'Treatments & Prices',
+  },
+  'treatments.menu.subtitle': {
+    de: 'Wählen Sie Ihre persönliche Auszeit.',
+    en: 'Choose your personal time to unwind.',
+  },
+  'treatments.menu.heading': {
+    de: 'Unsere Behandlungen',
+    en: 'Our Treatments',
+  },
+  'treatments.menu.intro': {
+    de: 'Drei ausgewählte Rituale für tiefe Entspannung, wohltuende Pflege und neues Wohlbefinden.',
+    en: 'Three selected rituals for deep relaxation, soothing care, and renewed well-being.',
+  },
+  'treatments.menu.massage.from': {
+    de: 'ab 40 €',
+    en: 'from €40',
+  },
+  'treatments.menu.foot.from': {
+    de: 'ab 45 €',
+    en: 'from €45',
+  },
+  'treatments.menu.headspa.from': {
+    de: 'ab 55 €',
+    en: 'from €55',
+  },
+  'treatments.duration.30': {
+    de: '30 Minuten',
+    en: '30 minutes',
+  },
+  'treatments.duration.45': {
+    de: '45 Minuten',
+    en: '45 minutes',
+  },
+  'treatments.duration.60': {
+    de: '60 Minuten',
+    en: '60 minutes',
+  },
+  'treatments.duration.90': {
+    de: '90 Minuten',
+    en: '90 minutes',
+  },
+  'treatments.duration.120': {
+    de: '120 Minuten',
+    en: '120 minutes',
+  },
+  'treatments.massage.kicker': {
+    de: 'Entspannung für den ganzen Körper',
+    en: 'Relaxation for the whole body',
+  },
+  'treatments.massage.subtitle': {
+    de: 'Entspannungsmassage für den ganzen Körper',
+    en: 'Relaxation massage for the whole body',
+  },
+  'treatments.massage.description': {
+    de: 'Wohltuende Massage zur tiefen Entspannung, Lockerung der Muskulatur und zum ganzheitlichen Wohlbefinden.',
+    en: 'A soothing massage for deep relaxation, easing muscle tension, and supporting overall well-being.',
+  },
+  'treatments.fussmassage.kicker': {
+    de: 'Pflege und Druckpunktmassage',
+    en: 'Care and pressure point massage',
+  },
+  'treatments.fussmassage.subtitle': {
+    de: 'Wohltuende Fußpflege mit Druckpunktmassage',
+    en: 'Soothing foot care with pressure point massage',
+  },
+  'treatments.fussmassage.description': {
+    de: 'Ein verwöhnendes Ritual mit Kräuterfußbad, sorgfältiger Fußpflege und intensiver Druckpunktmassage für tiefe Entspannung.',
+    en: 'A pampering ritual with an herbal foot bath, careful foot care, and intensive pressure point massage for deep relaxation.',
+  },
+  'treatments.headspa.kicker': {
+    de: 'Traditionelle Haar- und Kopfmassage',
+    en: 'Traditional hair and scalp massage',
+  },
+  'treatments.headspa.classic': {
+    de: 'Kopf- und Haarpflege mit entspannender Kopfmassage sowie Massage von Nacken und Schultern.',
+    en: 'Scalp and hair care with a relaxing head massage plus neck and shoulder massage.',
+  },
+  'treatments.headspa.deluxe': {
+    de: 'Intensive Kopf- und Haarpflege, verlängerte Kopfmassage sowie Massage von Nacken und Schultern.',
+    en: 'Intensive scalp and hair care, an extended head massage, plus neck and shoulder massage.',
+  },
+  'treatments.headspa.premium': {
+    de: 'Ganzheitliches Head-Spa-Ritual mit intensiver Kopf- und Haarpflege, entspannender Massage, Gesichtsreinigung und pflegender Gesichtsmaske.',
+    en: 'A complete Head Spa ritual with intensive scalp and hair care, relaxing massage, facial cleansing, and a nourishing face mask.',
+  },
+  'treatments.headspa.note': {
+    de: 'Hinweis: Die angegebene Behandlungsdauer beinhaltet das anschließende einfache Föhnen der Haare. Aufwendiges Haarstyling ist nicht im Preis enthalten.',
+    en: 'Please note: The treatment time includes simple blow-drying afterward. Elaborate hairstyling is not included in the price.',
   },
 
   /* ---------- Gallery Section ------------------------------------------- */
@@ -459,20 +554,20 @@ const translations = {
     en: 'Space for genuine calm.',
   },
   'home.tile.headspa': {
-    de: 'Tiefenreinigung, Pflege und Ruhe',
-    en: 'Deep cleansing, care and calm',
+    de: 'Haarpflege, Kopfmassage und Ruhe',
+    en: 'Hair care, scalp massage and calm',
   },
   'home.tile.massage': {
-    de: 'Spannung lösen, Kraft finden',
-    en: 'Release tension, restore energy',
+    de: 'Tiefe Entspannung für den ganzen Körper',
+    en: 'Deep relaxation for the whole body',
   },
   'home.tile.cosmetic': {
     de: 'Pflege für ein klares Hautgefühl',
     en: 'Care for fresh, clear skin',
   },
   'home.tile.foot': {
-    de: 'Leichtigkeit von Grund auf',
-    en: 'Lightness from the ground up',
+    de: 'Pflege und Druckpunktmassage',
+    en: 'Care and pressure point massage',
   },
   'home.tile.wellness': {
     de: 'Ihre persönliche Auszeit',

@@ -32,7 +32,7 @@ Website cao cấp được thiết kế riêng cho thương hiệu **BAMBOO SPA*
 d:/Bamboo Spa/
 ├── index.html              # Trang chủ đầy đủ (Hero slider, Service bar, About, Treatments, Gallery preview, Booking banner, Contact preview, Footer)
 ├── about.html              # Trang "Über uns" (Triết lý Zen, Giá trị cốt lõi, Không gian spa)
-├── treatments.html         # Trang "Behandlungen & Preise" (5 danh mục liệu trình: Head Spa, Massage, Kosmetik, Fußmassage, Wellness)
+├── treatments.html         # Trang "Behandlungen & Preise" (3 danh mục: Ganzkörpermassage, Exklusive Fußmassage, Vietnamese Head Spa)
 ├── gallery.html            # Trang "Galerie" (Masonry grid 12 hình ảnh, bộ lọc theo danh mục, Lightbox phóng to ảnh)
 ├── contact.html            # Trang "Kontakt" (Bản đồ Google Maps responsive, Địa chỉ, Giờ mở cửa, Form thông tin)
 │
@@ -59,13 +59,13 @@ d:/Bamboo Spa/
 
 ## 3. Các tính năng nổi bật
 
-1. **Chuẩn thiết kế Luxury Spa:** Tái hiện trung thực bố cục mẫu với Hero ban đêm ấm áp, thanh 5 dịch vụ viền vàng mảnh, phần giới thiệu kem sáng có hoa văn lá tre mờ, 5 thẻ liệu trình nền nâu socola đậm với nút tròn mũi tên vàng.
+1. **Chuẩn thiết kế Luxury Spa:** Hero ban đêm ấm áp, bảng dịch vụ viền vàng tinh tế và nội dung liệu trình nền nâu socola đồng nhất với thương hiệu.
 2. **Hero Slider 3 Slide:**
    - Slide 1: *"Zeit für Ruhe. Zeit für Sie."*
    - Slide 2: *"Entspannung für Körper und Seele."*
    - Slide 3: *"Ihre persönliche Auszeit beginnt hier."*
    - Chuyển cảnh mượt mà, tự động chuyển mỗi 6 giây, có bộ đếm thứ tự `01 / 03`.
-3. **Thanh 5 Dịch vụ (Service Bar):** Head Spa, Massage, Kosmetik, Fußmassage, Wellness với icon vàng thanh mảnh và đường ngăn cách tinh tế.
+3. **Thanh 3 Dịch vụ (Service Bar):** Ganzkörpermassage, Exklusive Fußmassage và Vietnamese Head Spa, đồng bộ với bảng giá chính thức.
 4. **Nút đặt lịch thông minh:** Nút `"Termin buchen"` đồng bộ ở Header, Hero, Booking Banner và các thẻ dịch vụ. Hiện tại khi click sẽ hiển thị thông báo trang trọng: *"Die Online-Terminbuchung ist bald verfügbar."* (chuẩn bị sẵn cấu hình để tích hợp link Treatwell).
 5. **Thư viện ảnh tương tác (Gallery & Lightbox):** Lưới ảnh đa dạng tỉ lệ, bộ lọc danh mục (Räumlichkeiten, Behandlungen, Atmosphäre), click mở Lightbox toàn màn hình hỗ trợ phím mũi tên và vuốt trên thiết bị di động.
 6. **Bản đồ Google Maps:** Nhúng bản đồ vị trí thực tế tại `Lothar-Streit-Straße 5, 08056 Zwickau` kèm nút `"Route planen"` dẫn đường trực tiếp.
@@ -73,7 +73,7 @@ d:/Bamboo Spa/
    - Chế độ Preview (`<meta name="robots" content="noindex, nofollow">`).
    - Banner Cookie thông báo chuẩn DSGVO (lưu trạng thái vào `localStorage`).
    - Sẵn sàng các trang liên kết chân trang: Impressum, Datenschutzerklärung, AGB.
-   - Không tự ý tạo số điện thoại hay giá tiền giả khi chưa có thông tin chính thức.
+   - Không tự ý tạo số điện thoại hay thông tin liên hệ khi chưa có dữ liệu chính thức.
 8. **Đa ngôn ngữ DE | EN:** Chuyển đổi ngôn ngữ tức thì qua nút trên Header với dữ liệu từ `translations.js`.
 
 ---
@@ -98,7 +98,7 @@ Khi chủ tiệm có số điện thoại chính thức, mở các tệp HTML (`
 ```
 
 ### 4.3. Cập nhật Bảng giá dịch vụ
-Khi có bảng giá liệu trình chính thức, mở `treatments.html` tại từng danh mục liệu trình và thay thế thẻ `.treatment-price-placeholder` bằng bảng giá tương ứng (ví dụ: 30 Min · 45€ / 60 Min · 75€).
+Bảng giá chính thức được đặt trong `treatments.html`; nội dung song ngữ tương ứng nằm trong `js/translations.js`.
 
 ### 4.4. Thay thế hình ảnh minh họa bằng ảnh thực tế
 Lưu các hình ảnh chụp thực tế vào thư mục `assets/images/` với các tên tương ứng và cập nhật thuộc tính `src` trong các tệp HTML.
