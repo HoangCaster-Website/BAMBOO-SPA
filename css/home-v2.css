@@ -1,16 +1,16 @@
 :root {
-  --bg: #160b05;
-  --bg-elevated: #241307;
-  --bg-soft: #2d170d;
-  --surface: #382012;
-  --surface-strong: #462719;
+  --bg: #321c11;
+  --bg-elevated: #422719;
+  --bg-soft: #50311f;
+  --surface: #5b3926;
+  --surface-strong: #6b4530;
   --text: #fff9f1;
-  --text-muted: #d5c1aa;
-  --line: rgba(232, 193, 139, 0.2);
+  --text-muted: #ead9c4;
+  --line: rgba(244, 211, 166, 0.3);
   --accent: #c99a5c;
   --accent-strong: #e8c18b;
   --accent-text: #241307;
-  --shadow: 0 24px 80px rgba(10, 4, 1, 0.48);
+  --shadow: 0 24px 80px rgba(29, 13, 6, 0.34);
   --radius: 16px;
   --header-height: 74px;
   --display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
@@ -67,7 +67,7 @@ button { color: inherit; font: inherit; }
   z-index: 20;
   height: var(--header-height);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(22, 11, 5, 0.92);
+  background: rgba(50, 28, 17, 0.9);
   backdrop-filter: blur(18px) saturate(130%);
   -webkit-backdrop-filter: blur(18px) saturate(130%);
 }
@@ -267,15 +267,15 @@ button { color: inherit; font: inherit; }
   z-index: -3;
   object-fit: cover;
   object-position: 58% center;
-  filter: saturate(.88) brightness(.9) contrast(1.05);
+  filter: saturate(.96) brightness(1.05) contrast(1.02);
   animation: hero-enter 1.4s cubic-bezier(.16, 1, .3, 1) both;
 }
 
 .hero-shade {
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(18, 8, 3, .98) 0%, rgba(35, 17, 8, .88) 31%, rgba(61, 32, 17, .36) 61%, rgba(35, 17, 8, .1) 100%),
-    linear-gradient(0deg, rgba(24, 11, 5, .56) 0%, transparent 42%);
+    linear-gradient(90deg, rgba(38, 19, 10, .86) 0%, rgba(58, 31, 18, .68) 31%, rgba(77, 45, 28, .24) 61%, rgba(52, 28, 16, .05) 100%),
+    linear-gradient(0deg, rgba(40, 21, 12, .38) 0%, transparent 42%);
 }
 
 .hero-inner {
@@ -337,7 +337,7 @@ button { color: inherit; font: inherit; }
 .service-rail {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: #1f1008;
+  background: #3b2114;
 }
 
 .service-rail-inner {
@@ -398,7 +398,7 @@ button { color: inherit; font: inherit; }
   height: 680px;
   border-radius: var(--radius);
   object-fit: cover;
-  filter: sepia(.28) saturate(.8) hue-rotate(-8deg) contrast(1.04);
+  filter: sepia(.16) saturate(.92) hue-rotate(-5deg) brightness(1.05) contrast(1.02);
   box-shadow: var(--shadow);
 }
 
@@ -424,7 +424,7 @@ button { color: inherit; font: inherit; }
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(45, 23, 13, .95);
+  background: rgba(80, 49, 31, .9);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
 }
@@ -520,12 +520,12 @@ button { color: inherit; font: inherit; }
 .treatment-tile img {
   object-fit: cover;
   transform: scale(1.02);
-  filter: sepia(.25) saturate(.75) hue-rotate(-8deg) contrast(1.04);
+  filter: sepia(.14) saturate(.9) hue-rotate(-5deg) brightness(1.04) contrast(1.02);
   transition: transform 700ms cubic-bezier(.16, 1, .3, 1), filter 400ms ease;
 }
 
 .tile-shade {
-  background: linear-gradient(0deg, rgba(18, 8, 3, .96) 0%, rgba(45, 23, 13, .42) 47%, rgba(35, 17, 8, .08) 100%);
+  background: linear-gradient(0deg, rgba(38, 19, 10, .78) 0%, rgba(72, 42, 26, .28) 47%, rgba(52, 28, 16, .04) 100%);
 }
 
 .tile-copy {
@@ -548,7 +548,7 @@ button { color: inherit; font: inherit; }
 
 .treatment-tile:hover img {
   transform: scale(1.08);
-  filter: sepia(.18) saturate(.86) hue-rotate(-6deg) contrast(1.06);
+  filter: sepia(.1) saturate(.98) hue-rotate(-4deg) brightness(1.08) contrast(1.03);
 }
 
 .treatment-tile:focus-visible { outline-offset: 5px; }
@@ -569,9 +569,9 @@ button { color: inherit; font: inherit; }
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(20, 9, 4, .96), rgba(55, 29, 16, .56) 52%, rgba(16, 7, 3, .93)),
+    linear-gradient(90deg, rgba(41, 22, 12, .82), rgba(82, 48, 29, .38) 52%, rgba(38, 19, 10, .72)),
     url("../assets/images/generated/bamboo-ritual-v2.jpg") center 58% / cover no-repeat;
-  filter: sepia(.24) saturate(.82) hue-rotate(-8deg);
+  filter: sepia(.14) saturate(.94) hue-rotate(-5deg) brightness(1.06);
   transform: scale(1.02);
 }
 
@@ -617,7 +617,7 @@ button { color: inherit; font: inherit; }
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: #100703;
+  background: #28150c;
 }
 
 .footer-inner {
@@ -673,7 +673,7 @@ button { color: inherit; font: inherit; }
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: #2d170d;
+  background: var(--bg-soft);
   box-shadow: var(--shadow);
 }
 
@@ -750,7 +750,7 @@ button { color: inherit; font: inherit; }
     position: fixed;
     inset: var(--header-height) 0 auto;
     z-index: 21;
-    background: #1f1008;
+    background: #3b2114;
   }
 
   .nav-menu.active {
@@ -770,7 +770,7 @@ button { color: inherit; font: inherit; }
     inset: var(--header-height) 0 0;
     z-index: 18;
     display: none;
-    background: rgba(18, 8, 3, .78);
+    background: rgba(38, 19, 10, .62);
     backdrop-filter: blur(4px);
   }
 
@@ -823,8 +823,8 @@ button { color: inherit; font: inherit; }
 
   .hero-shade {
     background:
-      linear-gradient(0deg, rgba(18, 8, 3, .98) 0%, rgba(35, 17, 8, .84) 49%, rgba(45, 23, 13, .28) 100%),
-      linear-gradient(90deg, rgba(24, 11, 5, .58), transparent);
+      linear-gradient(0deg, rgba(38, 19, 10, .88) 0%, rgba(58, 31, 18, .65) 49%, rgba(77, 45, 28, .18) 100%),
+      linear-gradient(90deg, rgba(45, 24, 14, .4), transparent);
   }
 
   .hero-inner { align-items: flex-end; padding-bottom: 62px; }
@@ -904,7 +904,7 @@ button { color: inherit; font: inherit; }
   .hero-copy,
   .hero h1,
   .hero-lead { max-width: calc(100vw - 32px); }
-  .hero h1 { font-size: 39px; line-height: 1.04; }
+  .hero h1 { font-size: 32px; line-height: 1.08; }
   .hero-lead { font-size: 14px; }
   .about-media,
   .about-media img { min-height: 460px; height: 460px; }
@@ -929,7 +929,7 @@ button { color: inherit; font: inherit; }
 @media (prefers-reduced-transparency: reduce) {
   .site-header,
   .about-media-note {
-    background: #1f1008;
+    background: #3b2114;
     backdrop-filter: none;
   }
 }
