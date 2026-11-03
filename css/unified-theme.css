@@ -1,30 +1,30 @@
 /* Unified warm brown and gold palette for all inner pages. */
 :root {
-  --primary: #4a2c1b;
-  --secondary: #5d3926;
+  --primary: #6a4933;
+  --secondary: #7b5a43;
   --gold: #c99a5c;
   --champagne: #e8c18b;
-  --warm-beige: #ead9c4;
-  --cream: #4a2c1b;
-  --soft-white: #fff9f1;
-  --text-dark: #fff9f1;
-  --black: #28150c;
-  --white: #fffaf2;
-  --overlay-dark: rgba(38, 19, 10, 0.66);
-  --overlay-light: rgba(78, 45, 27, 0.34);
+  --warm-beige: #f4e5d3;
+  --cream: #6a4933;
+  --soft-white: #fffaf4;
+  --text-dark: #fffaf4;
+  --black: #42271a;
+  --white: #fffaf4;
+  --overlay-dark: rgba(55, 31, 18, 0.5);
+  --overlay-light: rgba(103, 68, 45, 0.22);
   --gold-glow: rgba(201, 154, 92, 0.24);
-  --shadow-soft: rgba(29, 13, 6, 0.14);
-  --shadow-medium: rgba(29, 13, 6, 0.24);
-  --shadow-strong: rgba(29, 13, 6, 0.38);
+  --shadow-soft: rgba(45, 25, 14, 0.1);
+  --shadow-medium: rgba(45, 25, 14, 0.18);
+  --shadow-strong: rgba(45, 25, 14, 0.3);
 }
 
 html,
 body {
-  background: #321c11;
+  background: #533422;
 }
 
 body {
-  color: #ead9c4;
+  color: #f4e5d3;
 }
 
 h1,
@@ -43,7 +43,7 @@ h6,
 
 .header,
 .header.header--scrolled {
-  background: rgba(50, 28, 17, 0.92);
+  background: rgba(70, 42, 27, 0.9);
   border-bottom-color: rgba(228, 197, 141, 0.16);
 }
 
@@ -55,20 +55,20 @@ h6,
 
 .page-hero-overlay {
   background:
-    linear-gradient(180deg, rgba(38, 19, 10, 0.44), rgba(54, 29, 17, 0.62)),
-    linear-gradient(90deg, rgba(78, 45, 27, 0.2), transparent 60%);
+    linear-gradient(180deg, rgba(55, 31, 18, 0.3), rgba(74, 45, 28, 0.48)),
+    linear-gradient(90deg, rgba(103, 68, 45, 0.12), transparent 60%);
 }
 
 .section-cream {
-  background-color: #422719;
-  color: #ead9c4;
+  background-color: #62432e;
+  color: #f4e5d3;
 }
 
 .section-soft-white,
 .contact-section,
 .gallery-section {
-  background-color: #321c11;
-  color: #ead9c4;
+  background-color: #533422;
+  color: #f4e5d3;
 }
 
 .section-subtitle,
@@ -80,7 +80,7 @@ h6,
 .contact-card-content p,
 .contact-detail-text p,
 .contact-detail-text a {
-  color: #ead9c4;
+  color: #f4e5d3;
 }
 
 .about-detail-image,
@@ -89,19 +89,19 @@ h6,
 .contact-map-wrapper,
 .map-container {
   border: 1px solid rgba(228, 197, 141, 0.16);
-  box-shadow: 0 22px 54px rgba(29, 13, 6, 0.3);
+  box-shadow: 0 22px 54px rgba(45, 25, 14, 0.22);
 }
 
 .about-detail-image img,
 .treatment-detail-image img,
 .gallery-item img {
-  filter: saturate(0.96) brightness(1.05) contrast(1.02);
+  filter: saturate(1) brightness(1.12) contrast(1.01);
 }
 
 .philosophy-card,
 .treatments-notice,
 .contact-card {
-  background: #5d3926;
+  background: #7b5a43;
   border-color: rgba(228, 197, 141, 0.16);
   box-shadow: none;
 }
@@ -109,17 +109,17 @@ h6,
 .philosophy-card:hover,
 .contact-card:hover {
   border-color: rgba(228, 197, 141, 0.48);
-  box-shadow: 0 18px 40px rgba(29, 13, 6, 0.24);
+  box-shadow: 0 18px 40px rgba(45, 25, 14, 0.18);
 }
 
 .contact-card-icon,
 .contact-detail-icon {
-  background: #6b4530;
+  background: #8c6e55;
   border-color: rgba(228, 197, 141, 0.22);
 }
 
 .contact-booking-card {
-  background: linear-gradient(135deg, #68432e, #4a2c1b);
+  background: linear-gradient(135deg, #8a6850, #6a4933);
   border-color: rgba(228, 197, 141, 0.22);
 }
 
@@ -131,7 +131,7 @@ h6,
 
 .gallery-filter-btn {
   border-color: rgba(228, 197, 141, 0.38);
-  color: #ead9c4;
+  color: #f4e5d3;
 }
 
 .gallery-filter-btn:hover,
@@ -142,13 +142,13 @@ h6,
 }
 
 .booking-banner-overlay {
-  background: linear-gradient(180deg, rgba(38, 19, 10, 0.45), rgba(48, 24, 13, 0.7));
+  background: linear-gradient(180deg, rgba(55, 31, 18, 0.3), rgba(65, 37, 22, 0.52));
 }
 
 .footer,
 .cookie-banner,
 .preloader {
-  background: #28150c;
+  background: #42271a;
 }
 
 .btn-primary,
@@ -167,7 +167,7 @@ h6,
 }
 
 .btn-secondary {
-  background: #6b4530;
+  background: #8c6e55;
   color: var(--champagne);
 }
 
@@ -210,7 +210,7 @@ h6,
 
 @media (max-width: 860px) {
   .nav-menu {
-    background: #3b2114;
+    background: #5c3b27;
   }
 
   .brand-logo-image {

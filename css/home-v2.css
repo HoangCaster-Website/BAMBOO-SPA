@@ -1,16 +1,16 @@
 :root {
-  --bg: #321c11;
-  --bg-elevated: #422719;
-  --bg-soft: #50311f;
-  --surface: #5b3926;
-  --surface-strong: #6b4530;
-  --text: #fff9f1;
-  --text-muted: #ead9c4;
-  --line: rgba(244, 211, 166, 0.3);
+  --bg: #533422;
+  --bg-elevated: #62432e;
+  --bg-soft: #70513b;
+  --surface: #7e6049;
+  --surface-strong: #8c6e55;
+  --text: #fffaf4;
+  --text-muted: #f3e4d3;
+  --line: rgba(255, 229, 194, 0.38);
   --accent: #c99a5c;
   --accent-strong: #e8c18b;
   --accent-text: #241307;
-  --shadow: 0 24px 80px rgba(29, 13, 6, 0.34);
+  --shadow: 0 24px 80px rgba(45, 25, 14, 0.25);
   --radius: 16px;
   --header-height: 74px;
   --display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
@@ -67,7 +67,7 @@ button { color: inherit; font: inherit; }
   z-index: 20;
   height: var(--header-height);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(50, 28, 17, 0.9);
+  background: rgba(70, 42, 27, 0.88);
   backdrop-filter: blur(18px) saturate(130%);
   -webkit-backdrop-filter: blur(18px) saturate(130%);
 }
@@ -267,15 +267,15 @@ button { color: inherit; font: inherit; }
   z-index: -3;
   object-fit: cover;
   object-position: 58% center;
-  filter: saturate(.96) brightness(1.05) contrast(1.02);
+  filter: saturate(1) brightness(1.14) contrast(1.01);
   animation: hero-enter 1.4s cubic-bezier(.16, 1, .3, 1) both;
 }
 
 .hero-shade {
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(38, 19, 10, .86) 0%, rgba(58, 31, 18, .68) 31%, rgba(77, 45, 28, .24) 61%, rgba(52, 28, 16, .05) 100%),
-    linear-gradient(0deg, rgba(40, 21, 12, .38) 0%, transparent 42%);
+    linear-gradient(90deg, rgba(55, 31, 18, .7) 0%, rgba(78, 48, 30, .5) 31%, rgba(103, 68, 45, .14) 61%, rgba(74, 45, 28, .02) 100%),
+    linear-gradient(0deg, rgba(57, 33, 20, .22) 0%, transparent 42%);
 }
 
 .hero-inner {
@@ -337,7 +337,7 @@ button { color: inherit; font: inherit; }
 .service-rail {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: #3b2114;
+  background: #5c3b27;
 }
 
 .service-rail-inner {
@@ -398,7 +398,7 @@ button { color: inherit; font: inherit; }
   height: 680px;
   border-radius: var(--radius);
   object-fit: cover;
-  filter: sepia(.16) saturate(.92) hue-rotate(-5deg) brightness(1.05) contrast(1.02);
+  filter: sepia(.1) saturate(.98) hue-rotate(-3deg) brightness(1.12) contrast(1.01);
   box-shadow: var(--shadow);
 }
 
@@ -424,7 +424,7 @@ button { color: inherit; font: inherit; }
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(80, 49, 31, .9);
+  background: rgba(112, 81, 59, .88);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
 }
@@ -520,12 +520,12 @@ button { color: inherit; font: inherit; }
 .treatment-tile img {
   object-fit: cover;
   transform: scale(1.02);
-  filter: sepia(.14) saturate(.9) hue-rotate(-5deg) brightness(1.04) contrast(1.02);
+  filter: sepia(.08) saturate(.98) hue-rotate(-3deg) brightness(1.12) contrast(1.01);
   transition: transform 700ms cubic-bezier(.16, 1, .3, 1), filter 400ms ease;
 }
 
 .tile-shade {
-  background: linear-gradient(0deg, rgba(38, 19, 10, .78) 0%, rgba(72, 42, 26, .28) 47%, rgba(52, 28, 16, .04) 100%);
+  background: linear-gradient(0deg, rgba(55, 31, 18, .62) 0%, rgba(96, 63, 42, .18) 47%, rgba(74, 45, 28, .02) 100%);
 }
 
 .tile-copy {
@@ -548,7 +548,7 @@ button { color: inherit; font: inherit; }
 
 .treatment-tile:hover img {
   transform: scale(1.08);
-  filter: sepia(.1) saturate(.98) hue-rotate(-4deg) brightness(1.08) contrast(1.03);
+  filter: sepia(.04) saturate(1.04) hue-rotate(-2deg) brightness(1.16) contrast(1.02);
 }
 
 .treatment-tile:focus-visible { outline-offset: 5px; }
@@ -569,9 +569,9 @@ button { color: inherit; font: inherit; }
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(41, 22, 12, .82), rgba(82, 48, 29, .38) 52%, rgba(38, 19, 10, .72)),
+    linear-gradient(90deg, rgba(58, 34, 21, .64), rgba(108, 75, 51, .24) 52%, rgba(54, 31, 18, .54)),
     url("../assets/images/generated/bamboo-ritual-v2.jpg") center 58% / cover no-repeat;
-  filter: sepia(.14) saturate(.94) hue-rotate(-5deg) brightness(1.06);
+  filter: sepia(.08) saturate(1) hue-rotate(-3deg) brightness(1.12);
   transform: scale(1.02);
 }
 
@@ -617,7 +617,7 @@ button { color: inherit; font: inherit; }
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: #28150c;
+  background: #41271a;
 }
 
 .footer-inner {
@@ -750,7 +750,7 @@ button { color: inherit; font: inherit; }
     position: fixed;
     inset: var(--header-height) 0 auto;
     z-index: 21;
-    background: #3b2114;
+    background: #5c3b27;
   }
 
   .nav-menu.active {
@@ -770,7 +770,7 @@ button { color: inherit; font: inherit; }
     inset: var(--header-height) 0 0;
     z-index: 18;
     display: none;
-    background: rgba(38, 19, 10, .62);
+    background: rgba(55, 31, 18, .48);
     backdrop-filter: blur(4px);
   }
 
@@ -823,8 +823,8 @@ button { color: inherit; font: inherit; }
 
   .hero-shade {
     background:
-      linear-gradient(0deg, rgba(38, 19, 10, .88) 0%, rgba(58, 31, 18, .65) 49%, rgba(77, 45, 28, .18) 100%),
-      linear-gradient(90deg, rgba(45, 24, 14, .4), transparent);
+      linear-gradient(0deg, rgba(55, 31, 18, .74) 0%, rgba(78, 48, 30, .48) 49%, rgba(103, 68, 45, .1) 100%),
+      linear-gradient(90deg, rgba(62, 37, 23, .25), transparent);
   }
 
   .hero-inner { align-items: flex-end; padding-bottom: 62px; }
@@ -929,7 +929,7 @@ button { color: inherit; font: inherit; }
 @media (prefers-reduced-transparency: reduce) {
   .site-header,
   .about-media-note {
-    background: #3b2114;
+    background: #5c3b27;
     backdrop-filter: none;
   }
 }
